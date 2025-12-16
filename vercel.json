@@ -1,0 +1,1 @@
+{"version": 2, "builds": [{"src": "server/package.json", "use": "@vercel/node"}, {"src": "client/package.json", "use": "@vercel/static-build", "config": {"distDir": "dist"}}], "routes": [{"src": "/api/(.*)", "dest": "/server/api/index.js"}, {"src": "/(.*)", "dest": "/client/$1"}]}

@@ -34,11 +34,6 @@ export function createApp() {
     res.json({ ok: true, mongo: mongoose.connection.readyState });
   });
 
-  // Serve React app for all non-API routes
-  app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
-  });
-
   app.use('/api/auth', authRoutes);
   app.use('/api/users', userRoutes);
   app.use('/api/queue', queueRoutes);
@@ -46,6 +41,11 @@ export function createApp() {
   app.use('/api/matches', matchRoutes);
   app.use('/api/leaderboard', leaderboardRoutes);
   app.use('/api/stats', statsRoutes);
+
+  // Serve React app for all non-API routes (must be last)
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
+  });
 
   app.use((req, res) => {
     res.status(404).json({ error: 'Not Found' });
