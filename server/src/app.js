@@ -2,6 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 import authRoutes from './routes/authRoutes.js';
 import queueRoutes from './routes/queueRoutes.js';
@@ -23,8 +28,15 @@ export function createApp() {
   app.use(express.json());
   app.use(morgan('dev'));
 
+  app.use(express.static(path.join(__dirname, '../client/dist')));
+
   app.get('/health', (req, res) => {
     res.json({ ok: true, mongo: mongoose.connection.readyState });
+  });
+
+  // Serve React app for all non-API routes
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/dist/index.html'));
   });
 
   app.use('/api/auth', authRoutes);
