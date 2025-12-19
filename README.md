@@ -412,3 +412,17 @@ ArcadeConnect is intentionally configured to keep MongoDB usage minimal.
 - Persist match history in MongoDB (optional; currently in-memory)
 - Admin dashboard for colleges/events
 - Anti-cheat and ping sync
+
+- 
+here are few image of my ui:
+<img width="1470" height="836" alt="Screenshot 2025-12-19 at 11 53 02 PM" src="https://github.com/user-attachments/assets/13820f0e-b394-440a-8b37-b78e8a09e8f7" />
+
+<img width="1469" height="832" alt="Screenshot 2025-12-19 at 11 53 21 PM" src="https://github.com/user-attachments/assets/50461070-0ae3-46ab-a082-e61e19c6cbe5" />
+<img width="1470" height="834" alt="Screenshot 2025-12-19 at 11 53 45 PM" src="https://github.com/user-attachments/assets/968dfb75-48ce-4a15-b63d-3fe0069f95a2" />
+<img width="1470" height="833" alt="Screenshot 2025-12-19 at 11 54 06 PM" src="https://github.com/user-attachments/assets/93fa6e24-226e-4118-ae79-4c2fa399751a" />
+<img width="1468" height="833" alt="Screenshot 2025-12-19 at 11 54 24 PM" src="https://github.com/user-attachments/assets/569d5412-5bd0-4d68-85fc-83dd890969b9" />
+<img width="1469" height="834" alt="Screenshot 2025-12-19 at 11 54 44 PM" src="https://github.com/user-attachments/assets/7c31b189-6843-44d1-a84a-3dd00add8a07" />
+
+
+
+
